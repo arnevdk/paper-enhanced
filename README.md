@@ -9,6 +9,8 @@ Copy the `paperenhanced.cls` file to your LaTeX package directory, e.g. `~/texmf
 ## Example
 ![example paper page 1](example-0.png)
 ![example paper page 2](example-1.png)
+![example paper page 3](example-2.png)
+
 
 ## Usage
 
