@@ -1,3 +1,5 @@
+!example.pdf
+
 *.dtx
 build
 # Created by https://www.toptal.com/developers/gitignore/api/latex,tex,pycharm

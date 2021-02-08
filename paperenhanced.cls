@@ -11,11 +11,13 @@
 \RequirePackage{etoolbox}
 \RequirePackage{pgffor}
 \RequirePackage{array}
+\RequirePackage{amssymb}
 %\RequirePackage{enumitem}
 
 \newif\iftoc
 \newif\iftof
 \newif\iftos
+\newif\iffrontpage
 
 \tocfalse
 \toffalse
@@ -27,6 +29,7 @@
 \DeclareOption{toc}{\toctrue}
 \DeclareOption{tof}{\toftrue}
 \DeclareOption{tos}{\tostrue}
+\DeclareOption{frontpage}{\frontpagetrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{paper}}
 \ProcessOptions\relax
 
@@ -54,9 +57,6 @@
 % Black triangle as enumeration icon
 \renewcommand{\labelitemi}{$\blacktriangleright$}
 
-
-% Set bibliograpy font size to \footnotesize
-%\renewcommand*{\bibfont}{\footnotesize}
 
 % Title ================================================================
 
@@ -88,7 +88,7 @@
 \newcommand{\tablerow}[2]{
     \begin{tabularx}{\linewidth}{@{}p{3.5cm}X@{}}
         \textbsf{#1} & #2 \\
-    \end{tabularx}
+    \end{tabularx}%
 }
 
 \newcommand{\fmextras}{}
@@ -107,19 +107,21 @@
 
         \textbsf{Keywords}\smallskip
 
-        \thekeywords
+        \thekeywords\bigskip
+
+        \foreach \row in \fmextras {
+            \row\smallskip\par
+        }
 
         \iftoc\smalltableofcontents\fi
         \iftof\smalllistoftables\fi
         \iftos\smalllistoffigures\fi
-        \bigskip
 
-        \foreach \row in \fmextras {
-            \row \smallskip
-
-        }
-
-        \hrule\bigskip
+        \iffrontpage
+        \newpage
+        \else
+        \bigskip\hrule\bigskip
+        \fi
 
     \end{strip}
     \subsubsectionfont{\textit}
