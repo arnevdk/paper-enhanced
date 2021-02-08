@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/paper-enhanced.iml" filepath="$PROJECT_DIR$/.idea/paper-enhanced.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../paperenhanced/.idea/paper-enhanced.iml" filepath="$PROJECT_DIR$/../paperenhanced/.idea/paper-enhanced.iml" />
     </modules>
   </component>
 </project>

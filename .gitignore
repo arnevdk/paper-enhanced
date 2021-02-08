@@ -1,4 +1,5 @@
-
+*.dtx
+build
 # Created by https://www.toptal.com/developers/gitignore/api/latex,tex,pycharm
 # Edit at https://www.toptal.com/developers/gitignore?templates=latex,tex,pycharm
 
