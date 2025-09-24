@@ -1,6 +1,6 @@
 # paper-enhanced
 
-An improvement of the LaTeX paper document class (https://ctan.org/pkg/paper).
+A modern restyling of the LaTeX paper document class (https://ctan.org/pkg/paper).
 
 ## Install
 
